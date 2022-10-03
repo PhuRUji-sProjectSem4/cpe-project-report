@@ -3,23 +3,20 @@
 
 \ifproject
 \begin{abstractTH}
-เขียนบทคัดย่อของโครงงานที่นี่
 
-การเขียนรายงานเป็นส่วนหนึ่งของการทำโครงงานวิศวกรรมคอมพิวเตอร์
-เพื่อทบทวนทฤษฎีที่เกี่ยวข้อง อธิบายขั้นตอนวิธีแก้ปัญหาเชิงวิศวกรรม และวิเคราะห์และสรุปผลการทดลองอุปกรณ์และระบบต่างๆ
-\enskip อย่างไรก็ดี การสร้างรูปเล่มรายงานให้ถูกรูปแบบนั้นเป็นขั้นตอนที่ยุ่งยาก
-แม้ว่าจะมีต้นแบบสำหรับใช้ในโปรแกรม Microsoft Word แล้วก็ตาม
-แต่นักศึกษาส่วนใหญ่ยังคงค้นพบว่าการใช้งานมีความซับซ้อน และเกิดความผิดพลาดในการจัดรูปแบบ กำหนดเลขหัวข้อ และสร้างสารบัญอยู่
-\enskip ภาควิชาวิศวกรรมคอมพิวเตอร์จึงได้จัดทำต้นแบบรูปเล่มรายงานโดยใช้ระบบจัดเตรียมเอกสาร
-\LaTeX{} เพื่อช่วยให้นักศึกษาเขียนรายงานได้อย่างสะดวกและรวดเร็วมากยิ่งขึ้น
+
+    โครงงานนี้ได้นำเสนอเว็บไซต์ที่ใช้ในการให้บริการ จัดสร้าง และจัดการทัวร์นาเมนต์ที่ครบจบในที่เดียว อีกทั้งยังมีระบบในการเก็บประวัติให้แก่ผู้เล่นให้นำไปใช้เป็นที่สะสมผลงาน และนำไปสานต่อในการเป็นผู้เล่น E-sport ในอนาคต
+โดยเว็บไซต์ฝั่ง Frontend จะถูกพัฒนาด้วย React framework ใช้ภาษา JavaScript ฝั่ง Backend 
+จะถูกพัฒนาด้วย Nest framework ใช้ภาษา TypeScript ในส่วนของฐานข้อมูลใช้การจัดเก็บข้อมูลแบบSQL ร่วมกับ PostgreSQL ในการจัดการ 
+และใช้ Google Firebase Cloud Storage ในการจัดเก็บรูปภาพ
 \end{abstractTH}
 
 \begin{abstract}
-The abstract would be placed here. It usually does not exceed 350 words
-long (not counting the heading), and must not take up more than one (1) page
-(even if fewer than 350 words long).
 
-Make sure your abstract sits inside the \texttt{abstract} environment.
+    This project presents a website that can be used to serve, organize and manage tournament all in one website.
+there is also a system to collect history for player to use as portfolio.And lead to future participation in E-sport Career.
+The website's Forntend site will be developed with React framework using JavaScript. On the Backend site will be developed with Nest using TypeScript.For the database use SQL for storage with PostgreSQL
+and Google Firebase Cloud Storage to store images.
 \end{abstract}
 
 \iffalse
@@ -30,20 +27,14 @@ Dedication page is optional.
 \end{dedication}
 \fi % \iffalse
 
-\begin{acknowledgments}
-Your acknowledgments go here. Make sure it sits inside the
-\texttt{acknowledgment} environment.
 
-\acksign{2020}{5}{25}
-\end{acknowledgments}%
-\fi % \ifproject
 
 \contentspage
 
 \ifproject
 \figurelistpage
 
-\tablelistpage
+% \tablelistpage
 \fi % \ifproject
 
 % \abbrlist % this page is optional
