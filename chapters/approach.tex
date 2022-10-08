@@ -19,79 +19,125 @@
 % \titleformat{\section}{\normalfont\bfseries}{\thesection}{1em}{}
 % \titlespacing*{\section}{0pt}{10ex}{0pt}
 
-\section{Alice in Wonderland}
+\section{โครงสร้างของเว็บไซต์}
+โปรเจคนี้จะแบ่งออกเป็น 3 ส่วน ตามรูปที่ 3.1
+\begin{enumerate}
+  \item Fontend - ใช้ React ในการจัดการหน้าเว็ปไซต์
+  \item Backend - ใช้ Nest เป็นตัวกลางในการสื่อสารระหว่าง Fontend และ Database ด้วย API
+  \item Database - ใช้การเก็บข้อมูลแบบ SQL โดยใช้ PostgreSQL และใช้ Firebase Cloud Storage ในการเก็บรูปภาพจากการอัพโหลด
+\end{enumerate}
 
-\begin{figure}
-\begin{center}
-\includegraphics{800px-Briny_Beach.jpg}
-\end{center}
-\caption[Poem]{The Walrus and the Carpenter}
-\label{fig:walrus}
+
+\begin{figure}[h]
+  \begin{center}
+  \includegraphics[width=6cm,height=6cm,keepaspectratio]{SWA.png}
+  \end{center}
+  \caption[โครงสร้างของเว็บไซต์]{โครงสร้างของเว็บไซต์}
+  \label{fig:โครงสร้างของเว็บไซต์}
 \end{figure}
 
-\subsection{The Black Kitten}
-  One thing was certain, that the WHITE kitten had had nothing to
-do with it:---it was the black kitten's fault entirely~\cite{aiw}.  For the
-white kitten had been having its face washed by the old cat for
-the last quarter of an hour (and bearing it pretty well,
-considering); so you see that it COULDN'T have had any hand in
-the mischief.
+\section{ฟีเจอร์}
+\subsection{ฟีเจอร์การใช้งานของผู้เล่น}
+การใช้งานในฝั่งผู้เล่นจะมีระบบหลักๆ ดังนี้
+\begin{enumerate}
+  \item ระบบสร้างทีม - ใช้สร้างทีมเพื่อเข้าร่วมการแข่งขันทัวร์นาเมนต์ต่างๆ โดยจะสร้างทีมเป็นของแต่ละเกมที่ต้องการแข่งแยกกัน เช่น ทีมValorant ก็จะใช้ลงทัวร์นาเมนต์ได้แค่เกม Valorant เท่านั้น
+  \item ระบบจัดการทีม - ใช้จัดการในการเปลี่ยนชื่อ จัดการคนในทีม รับคนเข้าทีม และแสดงประวัติการเล่นของทีม
+  \item ระบบจัดการโปรไฟล์ - ใช้จัดการโปรไฟล์เปลี่ยนชื่อ แสดงข้อมูลการเข้าร่วมแข่ง และทีมที่อยู่
+  \item ระบบเลือก และสมัครทัวร์นาเมนต์ - เลือกทัวร์นาเมนต์ที่ต้องการแข่งขั้นสามารถดูรายละเอียด เลือกเกมที่ต้องการ และสมัครเข้าร่วมการแข่งขันได้
+\end{enumerate}
 
-  The way Dinah washed her children's faces was this:  first she
-held the poor thing down by its ear with one paw, and then with
-the other paw she rubbed its face all over, the wrong way,
-beginning at the nose:  and just now, as I said, she was hard at
-work on the white kitten, which was lying quite still and trying
-to purr---no doubt feeling that it was all meant for its good.
+\subsection{ฟีเจอร์การใช้งานของผู้จัดงาน}
+การใช้งานในฝั่งผู้จัดการจะมีระบบหลักๆ ดังนี้
+\begin{enumerate}
+  \item ระบบสร้างจัดการทัวร์นาเมนต์ - ใช้สร้างทัวร์นาเมต์กำหนดรายระเอียดการแข่ง กฎกติกา เวลาแข่ง และรูปหน้าปกทัวร์นาเมนต์
+  \item ระบบเดชบอร์ดในการจัดการทัวร์นาเมนต์ - ใช้ในการจัดการทัวร์นาเมนต์ผลแพ้ชนะ และเช็คหลักฐานการแข่งของแต่ละทีม
+  \item ระบบจัดตารางแข่ง - โดยระบบจะนำผู้เล่นที่มาสมัครเข้าทัวร์นาเมนต์นั้นๆมาสุ่มเรียงเข้าตารางให้ และอัพเดตตารางการแข่งขันเมื่อผลการแข่งขันมีการปรับเปลี่ยน
+\end{enumerate}
 
-  But the black kitten had been finished with earlier in the
-afternoon, and so, while Alice was sitting curled up in a corner
-of the great arm-chair, half talking to herself and half asleep,
-the kitten had been having a grand game of romps with the ball of
-worsted Alice had been trying to wind up, and had been rolling it
-up and down till it had all come undone again; and there it was,
-spread over the hearth-rug, all knots and tangles, with the
-kitten running after its own tail in the middle.
+\begin{figure}[h]
+  \begin{center}
+  \includegraphics[width=10cm,height=6cm,keepaspectratio]{homebf.png}
+  \end{center}
+  \caption[หน้าแรกของระบบที่ยังไม่ได้ล็อกอิน]{หน้าแรกของระบบที่ยังไม่ได้ล็อกอิน}
+  \label{fig:หน้าแรกของระบบที่ยังไม่ได้ล็อกอิน}
+\end{figure}
 
-\subsection{The Reproach}
+\begin{figure}[h]
+  \begin{center}
+  \includegraphics[width=10cm,height=6cm,keepaspectratio]{login.png}
+  \end{center}
+  \caption[หน้าล็อกอิน]{หน้าล็อกอิน}
+  \label{fig:หน้าล็อกอิน}
+\end{figure}
 
-  `Oh, you wicked little thing!' cried Alice, catching up the
-kitten, and giving it a little kiss to make it understand that it
-was in disgrace.  `Really, Dinah ought to have taught you better
-manners!  You OUGHT, Dinah, you know you ought!' she added,
-looking reproachfully at the old cat, and speaking in as cross a
-voice as she could manage---and then she scrambled back into the
-arm-chair, taking the kitten and the worsted with her, and began
-winding up the ball again.  But she didn't get on very fast, as
-she was talking all the time, sometimes to the kitten, and
-sometimes to herself.  Kitty sat very demurely on her knee,
-pretending to watch the progress of the winding, and now and then
-putting out one paw and gently touching the ball, as if it would
-be glad to help, if it might.
+\begin{figure}[h]
+  \begin{center}
+  \includegraphics[width=10cm,height=6cm,keepaspectratio]{reg.png}
+  \end{center}
+  \caption[หน้าสมัคร]{หน้าสมัคร}
+  \label{fig:หน้าสมัคร}
+\end{figure}
 
-  `Do you know what to-morrow is, Kitty?' Alice began.  `You'd
-have guessed if you'd been up in the window with me---only Dinah
-was making you tidy, so you couldn't.  I was watching the boys
-getting in stick for the bonfire---and it wants plenty of
-sticks, Kitty!  Only it got so cold, and it snowed so, they had
-to leave off.  Never mind, Kitty, we'll go and see the bonfire
-to-morrow.'  Here Alice wound two or three turns of the worsted
-round the kitten's neck, just to see how it would look:  this led
-to a scramble, in which the ball rolled down upon the floor, and
-yards and yards of it got unwound again.
+\begin{figure}[h]
+  \begin{center}
+  \includegraphics[width=10cm,height=6cm,keepaspectratio]{homeaf.png}
+  \end{center}
+  \caption[หน้าแรกของระบบหลังล็อกอิน]{หน้าแรกของระบบหลังล็อกอิน}
+  \label{fig:หน้าแรกของระบบหลังล็อกอิน}
+\end{figure}
 
-  `Do you know, I was so angry, Kitty,' Alice went on as soon as
-they were comfortably settled again, `when I saw all the mischief
-you had been doing, I was very nearly opening the window, and
-putting you out into the snow!  And you'd have deserved it, you
-little mischievous darling!  What have you got to say for
-yourself?  Now don't interrupt me!' she went on, holding up one
-finger.  `I'm going to tell you all your faults.  Number one:
-you squeaked twice while Dinah was washing your face this
-morning.  Now you can't deny it, Kitty:  I heard you!  What that
-you say?' (pretending that the kitten was speaking.)  `Her paw
-went into your eye?  Well, that's YOUR fault, for keeping your
-eyes open---if you'd shut them tight up, it wouldn't have
-happened.  Now don't make any more excuses, but listen!  Number
-two:  you pulled Snowdrop away by the tail just as I had put down
-the saucer of milk before her!  What, you were thirsty, were you?
+\begin{figure}[h]
+  \begin{center}
+  \includegraphics[width=10cm,height=6cm,keepaspectratio]{allteam.png}
+  \end{center}
+  \caption[หน้าทีมทั้งหมด]{หน้าทีมทั้งหมด}
+  \label{fig:หน้าทีมทั้งหมด}
+\end{figure}
+
+\begin{figure}[h]
+  \begin{center}
+  \includegraphics[width=10cm,height=6cm,keepaspectratio]{teamDetail.png}
+  \end{center}
+  \caption[หน้ารายละเอียดทีม และจัดการทีม]{หน้ารายละเอียดทีม และจัดการทีม}
+  \label{fig:หน้ารายละเอียดทีม และจัดการทีม}
+\end{figure}
+
+\begin{figure}[h]
+  \begin{center}
+  \includegraphics[width=10cm,height=6cm,keepaspectratio]{member.png}
+  \end{center}
+  \caption[หน้ารายละเอียดทีม และจัดการทีม(สมาชิกทีม)]{หน้ารายละเอียดทีม และจัดการทีม(สมาชิกทีม)}
+  \label{fig:หน้ารายละเอียดทีม และจัดการทีม(สมาชิกทีม)}
+\end{figure}
+
+\begin{figure}[h]
+  \begin{center}
+  \includegraphics[width=10cm,height=6cm,keepaspectratio]{allTour.png}
+  \end{center}
+  \caption[หน้าทัวร์นาเมนต์ทั้งหมด]{หน้าทัวร์นาเมนต์ทั้งหมด}
+  \label{fig:หน้าทัวร์นาเมนต์ทั้งหมด}
+\end{figure}
+
+\begin{figure}[h]
+  \begin{center}
+  \includegraphics[width=10cm,height=10cm,keepaspectratio]{tourRule.png}
+  \end{center}
+  \caption[หน้ารายละเอียดทัวร์นาเมนต์(กฎกติกา)]{หน้ารายละเอียดทัวร์นาเมนต์(กฎกติกา)}
+  \label{fig:หน้ารายละเอียดทัวร์นาเมนต์(กฎกติกา)}
+\end{figure}
+
+\begin{figure}[h]
+  \begin{center}
+  \includegraphics[width=10cm,height=10cm,keepaspectratio]{tourBac.png}
+  \end{center}
+  \caption[หน้ารายละเอียดทัวร์นาเมนต์(ตารางแข่ง)]{หน้ารายละเอียดทัวร์นาเมนต์(ตารางแข่ง)}
+  \label{fig:หน้ารายละเอียดทัวร์นาเมนต์(ตารางแข่ง)}
+\end{figure}
+
+\begin{figure}[h]
+  \begin{center}
+  \includegraphics[width=10cm,height=10cm,keepaspectratio]{TourTeam.png}
+  \end{center}
+  \caption[หน้ารายละเอียดทัวร์นาเมนต์(ทีมที่สมัคร)]{หน้ารายละเอียดทัวร์นาเมนต์(ทีมที่สมัคร)}
+  \label{fig:หน้ารายละเอียดทัวร์นาเมนต์(ทีมที่สมัคร)}
+\end{figure}
